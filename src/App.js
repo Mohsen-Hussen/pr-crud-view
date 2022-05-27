@@ -1,8 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
-import EditTicket from "./components/EditTicket";
-import AddTicket from "./components/AddTicket";
+import NotFoundPage from "./components/NotFoundPage";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -11,8 +10,7 @@ function App() {
 			<Navbar />
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="edit-ticket" element={<EditTicket />} />
-				<Route path="add-ticket" element={<AddTicket />} />
+				<Route path="*" element={<NotFoundPage />} />
 			</Routes>
 		</div>
 	);
